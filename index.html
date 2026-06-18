@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Michele Ciaceri — Private Equity, Valuation, Financial Modeling. MSc Corporate Finance & Investment Banking, Sapienza." />
+<!-- Link preview (LinkedIn / WhatsApp). Replace YOURUSERNAME with your GitHub username. -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://YOURUSERNAME.github.io/" />
+<meta property="og:title" content="Michele Ciaceri — Private Equity Analyst" />
+<meta property="og:description" content="Personal profile · Private equity on the Italian mid-market — financial modeling, valuation, M&A and deal execution. MSc Corporate Finance & Investment Banking, Sapienza." />
+<meta property="og:image" content="https://YOURUSERNAME.github.io/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<title>Michele Ciaceri</title>
+<style>
+  :root{
+    --bg:#131619;          /* dark grey, near-black (consistent everywhere) */
+    --bg2:#0f1113;
+    --ink:#eceef1;          /* off-white */
+    --soft:#c4c9d0;         /* body text */
+    --muted:#878d96;
+    --faint:#5f666f;
+    --accent:#86b2ea;       /* azure */
+    --rule:#262a30;
+    --navbg:rgba(17,19,22,.82);
+    --veil1:rgba(15,17,19,.55);
+    --veil2:rgba(19,22,25,.82);
+    --maxw:700px;
+  }
+  body.light{
+    --bg:#f7f7f5; --bg2:#ffffff; --ink:#1b1f24; --soft:#41474f; --muted:#6f757d;
+    --faint:#9aa1aa; --accent:#2f5d9e; --rule:#e7e7e3;
+    --navbg:rgba(255,255,255,.85);
+    --veil1:rgba(255,255,255,.55); --veil2:rgba(255,255,255,.82);
+  }
+  body{transition:background-color .4s ease,color .4s ease}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  a{color:var(--ink);text-decoration:none;border-bottom:1px solid #33415480;transition:.2s}
+  a:hover{border-color:var(--accent);color:var(--accent)}
+  h1,h2,h3{font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.01em}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:var(--navbg);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  nav .brand{font-family:Georgia,serif;font-size:16px;border:0;color:var(--ink)}
+  nav .links a{font-size:13px;color:var(--accent);margin-left:24px;border:0;letter-spacing:.04em}
+  nav .links a:hover{opacity:.7;color:var(--accent)}
+  #themeToggle{margin-left:24px;background:none;border:1px solid var(--rule);color:var(--muted);
+    width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;line-height:1;transition:.2s;vertical-align:middle}
+  #themeToggle:hover{border-color:var(--accent);color:var(--accent)}
+  @media(max-width:640px){nav .links a{display:none}}
+
+  /* scroll progress dots */
+  .progress{position:fixed;right:26px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:15px;z-index:60}
+  .progress a{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--muted);display:block;border-bottom-width:1.5px;transition:.25s;position:relative}
+  .progress a.active{background:var(--accent);border-color:var(--accent);transform:scale(1.3)}
+  .progress a:hover{border-color:var(--accent)}
+  .progress a.active::before{content:'';position:absolute;inset:-7px;border:1px solid var(--accent);border-radius:50%;opacity:.6;animation:ring 1.9s ease-out infinite}
+  @keyframes ring{0%{transform:scale(.55);opacity:.65}100%{transform:scale(1.5);opacity:0}}
+  .progress a::after{content:attr(data-label);position:absolute;right:20px;top:50%;transform:translateY(-50%);
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;opacity:0;transition:.2s;pointer-events:none}
+  .progress a:hover::after{opacity:1}
+  @media(max-width:900px){.progress{display:none}}
+
+  /* hero */
+  header.hero{position:relative;padding:140px 0 120px;border-bottom:1px solid var(--rule);
+    background-color:var(--bg);
+    background-image:linear-gradient(var(--veil1),var(--veil2)),url('hero.jpg'),url('assets/rome.svg');
+    background-size:cover,cover,cover;background-position:center,center,bottom center;background-repeat:no-repeat}
+  .kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+  h1{font-size:54px;line-height:1.05;margin:0 0 22px;color:var(--ink)}
+  /* at-a-glance strip (minimal one-liner) */
+  .glance{margin-top:30px;padding-top:18px;border-top:1px solid var(--rule);
+    font-size:12px;letter-spacing:.10em;color:var(--muted);max-width:580px}
+  .glance b{color:var(--soft);font-weight:600}
+  .lead{font-size:20px;color:var(--ink);max-width:580px;margin:0}
+  .sub{font-size:16px;color:var(--soft);max-width:580px;margin:12px 0 0}
+  .herolinks{margin-top:32px;font-size:14px}
+  .herolinks a{margin-right:26px;color:var(--soft);border-bottom-color:#3a4b62}
+  .herolinks a:hover{color:var(--accent)}
+
+  /* sections */
+  section{padding:66px 0;border-bottom:1px solid var(--rule)}
+  .sec-label{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin:0 0 40px}
+  .entry{display:grid;grid-template-columns:96px 1fr;gap:28px;margin-bottom:46px}
+  .entry:last-child{margin-bottom:0}
+  @media(max-width:640px){.entry{grid-template-columns:1fr;gap:6px}}
+  .when{font-size:13px;color:var(--muted);line-height:1.5;padding-top:3px}
+  h3{font-size:18px;margin:0 0 3px;color:var(--ink)}
+  .role{font-size:14px;color:var(--accent);margin:0 0 12px}
+  p{margin:0 0 12px;color:var(--soft)}
+  p:last-child{margin-bottom:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  @media(max-width:640px){.two{grid-template-columns:1fr;gap:30px}}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
+  @media(max-width:640px){.three{grid-template-columns:1fr;gap:30px}}
+  .blocklabel{font-size:13px;letter-spacing:.04em;color:var(--accent);font-weight:600;margin-bottom:10px}
+  ul{list-style:none;padding:0;margin:0}
+  ul li{font-size:15px;color:var(--soft);padding:7px 0;border-bottom:1px solid var(--rule)}
+  ul li:last-child{border-bottom:0}
+  .note{font-size:13px;color:var(--muted);font-style:italic;margin-top:30px}
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  /* hero fade-in on load */
+  header.hero .wrap>*{opacity:0;transform:translateY(16px);animation:rise .9s cubic-bezier(.2,.6,.2,1) forwards}
+  header.hero .kicker{animation-delay:.05s}
+  header.hero h1{animation-delay:.18s}
+  header.hero .lead{animation-delay:.32s}
+  header.hero .sub{animation-delay:.44s}
+  header.hero .herolinks{animation-delay:.56s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  footer{padding:30px 0;display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+  footer a{color:var(--muted);border:0}
+  footer a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <span class="brand">Michele Ciaceri</span>
+  <span class="links">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a>
+    <a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    <button id="themeToggle" aria-label="Toggle light/dark theme" title="Light / dark">☀</button>
+  </span>
+</div></nav>
+
+<div class="progress" aria-hidden="true">
+  <a href="#hero" data-label="Top"></a>
+  <a href="#about" data-label="About"></a>
+  <a href="#experience" data-label="Experience"></a>
+  <a href="#work" data-label="Work"></a>
+  <a href="#education" data-label="Education"></a>
+  <a href="#skills" data-label="Skills"></a>
+  <a href="#contact" data-label="Contact"></a>
+</div>
+
+<header class="hero" id="hero"><div class="wrap">
+  <div class="kicker">Private Equity · Valuation · Financial Modeling</div>
+  <h1>Michele Ciaceri</h1>
+  <p class="lead">Private Equity Analyst at Enosi Holding, focused on the Italian mid-market.</p>
+  <p class="sub">MSc Corporate Finance &amp; Investment Banking — Sapienza · ex-Fideuram (Intesa Sanpaolo) · Rome.</p>
+  <div class="herolinks">
+    <a href="mailto:micheleciaceri@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/michele-ciaceri" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="MicheleCiaceri_CV.pdf" target="_blank" rel="noopener">CV</a>
+  </div>
+  <p class="glance"><b>8</b> sectors · <b>3</b> countries (IT · US · BR) · full deal cycle · DCF · LBO · IM</p>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <p class="sec-label">About</p>
+  <div class="two">
+    <div>
+      <div class="blocklabel">Profile</div>
+      <p>I work within a small, hands-on and highly operational investment team at a merchant bank / investment holding with a highly diversified portfolio. The structure gives me continuous, first-hand exposure to the full deal flow — across different transaction types, strategies and sectors — covering screening, valuation, due diligence, deal structuring, investor materials and portfolio monitoring, on buy-side, growth and turnaround situations.</p>
+      <p>My work spans integrated three-statement and operating models, valuation (DCF/APV, LBO, trading comparables, precedent transactions), financial-statement reclassification, and the preparation of IC memos, investment theses, teasers and Information Memoranda. I am building a vertical career in private equity, pairing analytical rigor with a full-cycle view of the investment process.</p>
+    </div>
+    <div>
+      <div class="blocklabel">Beyond the desk</div>
+      <p>Agonistic footballer (FIGC) — five seasons as team captain and a league top-scorer title — where discipline, resilience and teamwork became second nature. Long-time Caritas volunteer supporting meal distribution and reintegration initiatives.</p>
+      <p>Outside finance: competitive sport (football, rugby, long-distance running) and time in nature.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <p class="sec-label">Experience</p>
+
+  <div class="entry">
+    <div class="when">2026<br/>Rome</div>
+    <div>
+      <h3>Enosi Holding</h3>
+      <p class="role">Private Equity Analyst (Intern)</p>
+      <p>Merchant bank / investment holding with a highly diversified portfolio. Within a lean, highly operational deal team, I support the full investment process on buy-side, growth and turnaround / corporate-restructuring deals across automotive composites, food &amp; beverage, fashion, MedTech, engineering and industrial services (Italy, US, Brazil): financial modeling, valuation (DCF/APV, comparables, precedent transactions, incl. Valutico), financial-statement reclassification, due diligence, deal structuring (work-for-equity, earn-in, term sheets/LOI, business combinations, cap-table analysis), investor materials (IC memos, theses, teasers, Information Memoranda) and portfolio monitoring.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">Jan–Jul<br/>2024</div>
+    <div>
+      <h3>Fideuram — Intesa Sanpaolo Private Banking</h3>
+      <p class="role">Investment &amp; Portfolio Analysis Intern</p>
+      <p>One of Europe's leading financial groups. Supported portfolio construction and management for private clients: risk and performance analytics on BlackRock's Aladdin®, fund/ETF screening, automated reporting and client-ready, MiFID II–compliant materials, with quarterly performance attribution (allocation vs. selection vs. interaction) versus benchmark.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <p class="sec-label">Selected Work</p>
+
+  <div class="entry">
+    <div class="when">2026</div>
+    <div>
+      <h3>Advanced-composites automotive Tier-1 — capital raise &amp; advisory</h3>
+      <p class="role">Work-for-equity advisory · Italy / US</p>
+      <p>Supported a multi-pillar advisory mandate for an Italian carbon-fibre components leader scaling into volume programmes: investment-committee memo, due-diligence checklist and a two-track fundraising strategy (bank debt and private lending), with analysis of client concentration, CAPEX execution and the work-for-equity valuation mechanism.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2026</div>
+    <div>
+      <h3>Premium-dairy platform — buy-and-build (NewCo)</h3>
+      <p class="role">Buyout + capital raise · Information Memorandum</p>
+      <p>Built the investor-facing Information Memorandum for a buy-and-build in premium Italian dairy: Sources &amp; Uses, cap table, integrated 2021–2028E business plan (income statement, balance sheet, cash flow), primary market analysis and a value-versus-volume premiumization narrative.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2026</div>
+    <div>
+      <h3>EGM-listed luxury-fashion marketplace — PE screening</h3>
+      <p class="role">Public-to-Private feasibility &amp; valuation</p>
+      <p>Preliminary screening of a listed online luxury-fashion marketplace: reclassification of four years of financials, a five-year DCF with recalibrated WACC, public comparables, precedent transactions and a football-field valuation, with a discount decomposition and a P2P / minority-entry assessment.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2026</div>
+    <div>
+      <h3>Industrial turnaround — NewCo modeling &amp; valuation</h3>
+      <p class="role">Restructuring / special situations</p>
+      <p>Built a multi-sheet master model for an early-stage industrial NewCo: statutory reclassification, three-statement build, APV/DCF valuation with beta unlevering/relevering and dual terminal value, a monthly cash bridge and a multi-line stress test — alongside a management report and information-request tracker.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2024</div>
+    <div>
+      <h3>BSc dissertation — AI in finance</h3>
+      <p class="role">LUISS Guido Carli</p>
+      <p>"Artificial Intelligence Applied to Financial Instruments, Markets, and Intermediaries" — how AI reshapes instruments, market microstructure and the role of financial intermediaries.</p>
+    </div>
+  </div>
+
+  <p class="note">Live transactions are presented in anonymized form; further detail available on request, subject to confidentiality.</p>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <p class="sec-label">Education</p>
+
+  <div class="entry">
+    <div class="when">2024–26<br/>Rome</div>
+    <div>
+      <h3>Sapienza University of Rome</h3>
+      <p class="role">MSc Corporate Finance &amp; Investment Banking · GPA 29.44 / 30</p>
+      <p>Selected coursework (all 30/30): Advanced Portfolio Management &amp; Financial Engineering; Corporate and Investment Banking; Advanced Corporate Finance; Law of Issuers, Intermediaries and International Financial Markets.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2025–26<br/>Germany</div>
+    <div>
+      <h3>University of Tübingen — Exchange</h3>
+      <p class="role">MSc Business Administration · Top-100 worldwide (Times Higher Education)</p>
+      <p>Corporate Strategy — M&amp;A and Divestitures; Advanced Corporate Finance; Advanced Topics in Asset Management; Economics of Renewable Energy.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="when">2021–24<br/>Rome</div>
+    <div>
+      <h3>LUISS Guido Carli University</h3>
+      <p class="role">BSc Economics &amp; Management</p>
+      <p>Mathematics, Financial Mathematics, Corporate Finance, Applied Statistics &amp; Econometrics, Value Creation Strategies, AI Applied to Decision-Making.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <p class="sec-label">Skills &amp; Tools</p>
+  <div class="three">
+    <div>
+      <div class="blocklabel">Finance &amp; Analysis</div>
+      <ul>
+        <li>Three-statement &amp; operating models</li>
+        <li>Valuation — DCF / APV, LBO, comparables, precedent transactions</li>
+        <li>Scenario &amp; sensitivity analysis; statutory reclassification</li>
+        <li>IC memos, theses, teasers &amp; Information Memoranda</li>
+        <li>Due diligence, deal structuring &amp; cap-table analysis</li>
+      </ul>
+    </div>
+    <div>
+      <div class="blocklabel">Tools &amp; Languages</div>
+      <ul>
+        <li>Excel (advanced), PowerPoint, Word</li>
+        <li>Valutico · S&amp;P Capital IQ</li>
+        <li>BlackRock Aladdin® · MATLAB · R · basic Python</li>
+        <li>Italian (native) · English (C1.2) · French (conversational)</li>
+      </ul>
+    </div>
+    <div>
+      <div class="blocklabel">Soft Skills</div>
+      <ul>
+        <li>Ownership &amp; autonomy across multiple workstreams</li>
+        <li>Problem-solving &amp; analytical judgment</li>
+        <li>Stakeholder &amp; relationship management — active listening, mediation</li>
+        <li>Resilience &amp; execution under pressure</li>
+        <li>Intellectual curiosity &amp; cross-sector adaptability</li>
+        <li>Leadership &amp; teamwork</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <p class="sec-label">Contact</p>
+  <p>Open to connecting on private equity, valuation and the questions around them.</p>
+  <p class="herolinks" style="margin-top:18px">
+    <a href="mailto:micheleciaceri@gmail.com">micheleciaceri@gmail.com</a>
+    <a href="https://www.linkedin.com/in/michele-ciaceri" target="_blank" rel="noopener">linkedin.com/in/michele-ciaceri</a>
+    <a href="MicheleCiaceri_CV.pdf" target="_blank" rel="noopener">CV</a>
+  </p>
+</div></section>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%">
+  <span>© 2026 Michele Ciaceri</span>
+  <a href="#hero">Back to top ↑</a>
+</div></footer>
+
+<script>
+  const dots = Array.from(document.querySelectorAll('.progress a'));
+  const ids = dots.map(d => d.getAttribute('href').slice(1));
+  const sections = ids.map(id => document.getElementById(id));
+  function setActive(id){ dots.forEach(d => d.classList.toggle('active', d.getAttribute('href') === '#' + id)); }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+  sections.forEach(s => s && obs.observe(s));
+  setActive('hero');
+
+  // scroll-reveal of content blocks
+  const reveals = document.querySelectorAll('.entry, .two, .three, section .sec-label, #contact p');
+  reveals.forEach(el => el.classList.add('reveal'));
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); ro.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => ro.observe(el));
+
+  // (at-a-glance numbers are shown statically for a sober, institutional tone)
+
+  // theme toggle (persisted)
+  const toggle = document.getElementById('themeToggle');
+  function applyTheme(t){ document.body.classList.toggle('light', t === 'light'); toggle.textContent = t === 'light' ? '☾' : '☀'; }
+  let theme = localStorage.getItem('theme') || 'dark';
+  applyTheme(theme);
+  toggle.addEventListener('click', () => { theme = document.body.classList.contains('light') ? 'dark' : 'light'; localStorage.setItem('theme', theme); applyTheme(theme); });
+</script>
+</body>
+</html>
